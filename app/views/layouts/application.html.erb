@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CraigsList</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+  <ul class="left">
+    <li><a href="/">CRAIGSLIST CLONE</a></li>
+  </ul>
+
+  <ul class="right">
+    <li><a href="/">HOME</a></li>
+    <% if current_user %>
+      <li><a href="#">Signed in as <%= current_user.name %></a><li>
+      <li><%= link_to "LOG OUT", '/logout' %></li>
+    <% else %>
+      <li><%= link_to "LOG IN", '/login', id: "login" %></li>
+      <li><%= link_to "REGISTER", signup_path %></li>
+    <% end %>
+  </ul>
+</nav>
+
+  <p class="flash">
+    <%= flash.notice %>
+  </p>
+<%= yield %>
+
+</body>
+</html>

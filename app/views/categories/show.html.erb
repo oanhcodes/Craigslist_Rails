@@ -1,0 +1,11 @@
+<div class="container">
+  <h1> <%= @category.title %> </h1>
+  <ul>
+    <% @articles.each do |article|%>
+      <li> <%= link_to article.title, category_article_path(@category, article) %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Create a New Article", new_category_article_path(@category, @article)  %>
+  <%= link_to "Back to the Homepage", categories_path %>
+</div>

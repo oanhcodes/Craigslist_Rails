@@ -1,0 +1,134 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body, html {
+  margin: 0;
+  padding: 0;
+ }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #7986CB;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+nav a:hover {
+color: gray;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.container {
+  margin: 150px auto;
+}
+
+.main {
+  width: 60%;
+  margin: 80px auto;
+}
+
+.main li {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+  list-style-type: none;
+}
+
+.category-container {
+  height: 300px;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.category-container li {
+  margin: 1em;
+  display: inline-block;
+}
+
+.category-container li a {
+    text-decoration: none;
+}
+
+.card {
+  text-align: center;
+  background-color: #f6f6f6;
+  width: 300px;
+  height: 50px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 1px 2px rgba(0,0,0,0.22);
+  transition: all 0.5s linear;
+}
+
+.card:hover {
+  background-color: gray;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.30), 0 2px 4px rgba(0,0,0,0.22);
+  transition: all 0.5s linear;
+}
+
+.category_title {
+  color: black;
+}
+
+.category_title:hover {
+  color: blue;
+}
+
+.flash {
+  margin-top: 100px;
+}
+
+
+.login {
+  text-align: center;
+  position: absolute;
+  height: 40%;
+  width: 60%;
+  left: 25em;
+  top: 10em;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.30), 0 2px 4px rgba(0,0,0,0.22);
+}
+
+.login input {
+  margin: 15px auto;
+  display: block;
+  border: none;
+  border-bottom: 1px solid black;
+}

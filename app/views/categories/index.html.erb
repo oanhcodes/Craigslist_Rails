@@ -1,0 +1,11 @@
+<div class="category-container">
+  <ul>
+  <% @categories.each do |category| %>
+    <li class="card"><%= link_to category.title.upcase, category_path(category), class: 'category_title' %></li>
+  <% end %>
+  </ul>
+</div>
+
+<div class="login">
+  <%= render partial: 'sessions/new' %>
+</div>
